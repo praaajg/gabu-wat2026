@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the paper and this repository."
+title: "GABU@WAT 2026: Zero Shot and QLoRA Adaptation of Gemma 4 E4B for Multimodal English to Indic Translation"
+type: software
+authors:
+  - family-names: Saud
+    given-names: Shiv Ram
+    affiliation: "Kathmandu University"
+  - family-names: Mahato
+    given-names: Aashish
+    affiliation: "Kathmandu University"
+  - family-names: Ghimire
+    given-names: Prajwal
+    affiliation: "Kathmandu University"
+  - family-names: Dawadi
+    given-names: Sundeep
+    affiliation: "Kathmandu University"
+  - family-names: Saud
+    given-names: Ramesh
+  - family-names: Regmi
+    given-names: Sunil
+    affiliation: "Kathmandu University"
+repository-code: "https://github.com/praaajg/gabu-wat2026"
+url: "https://github.com/praaajg/gabu-wat2026"
+license: MIT
+version: 1.0.0
+date-released: "2026-11-09"
+keywords:
+  - multimodal machine translation
+  - English to Indic
+  - WAT 2026
+  - QLoRA
+  - Gemma
+preferred-citation:
+  type: conference-paper
+  title: "GABU@WAT 2026: Zero Shot and QLoRA Adaptation of Gemma 4 E4B for Multimodal English to Indic Translation"
+  authors:
+    - family-names: Saud
+      given-names: Shiv Ram
+    - family-names: Mahato
+      given-names: Aashish
+    - family-names: Ghimire
+      given-names: Prajwal
+    - family-names: Dawadi
+      given-names: Sundeep
+    - family-names: Saud
+      given-names: Ramesh
+    - family-names: Regmi
+      given-names: Sunil
+  booktitle: "Proceedings of the 13th Workshop on Asian Translation (WAT 2026)"
+  year: 2026
+  month: 11
+  start: 145
+  end: 154
+  publisher:
+    name: "Association for Computational Linguistics"

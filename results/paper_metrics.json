@@ -1,0 +1,38 @@
+{
+  "test": {
+    "macro": {
+      "bleu": 43.97,
+      "chrf3": 69.99
+    },
+    "baseline_macro": {
+      "bleu": 19.58,
+      "chrf3": 51.27
+    },
+    "delta": {
+      "bleu": 24.39,
+      "chrf3": 18.72
+    }
+  },
+  "challenge": {
+    "macro": {
+      "bleu": 40.37,
+      "chrf3": 68.25
+    },
+    "baseline_macro": {
+      "bleu": 23.67,
+      "chrf3": 56.35
+    },
+    "delta": {
+      "bleu": 16.7,
+      "chrf3": 11.9
+    }
+  },
+  "training": {
+    "train_rows": 115715,
+    "dev_rows": 3992,
+    "steps": 3000,
+    "trainable_parameters": 139526144,
+    "total_parameters": 8080626976,
+    "trainable_fraction": 0.0173
+  }
+}

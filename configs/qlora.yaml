@@ -1,0 +1,75 @@
+# Reference configuration for GABU, the WAT 2026 English-to-Indic system.
+# Values follow Sections 3-6 and Tables 2-4 of the paper.
+
+model:
+  id: google/gemma-4-E4B-it
+  load_in_4bit: true
+  quant_type: nf4
+  double_quant: true
+  compute_dtype: float16
+  attn_implementation: sdpa
+
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.05
+  bias: none
+  task_type: CAUSAL_LM
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+
+training:
+  output_dir: outputs/gabu-gemma4-e4b-qlora
+  max_steps: 3000
+  learning_rate: 1.0e-4
+  optimizer: adamw_8bit
+  scheduler: cosine
+  warmup_ratio: 0.05
+  per_device_train_batch_size: 1
+  per_device_eval_batch_size: 1
+  gradient_accumulation_steps: 8
+  max_seq_length: 1024
+  eval_steps: 500
+  save_steps: 500
+  logging_steps: 20
+  early_stopping_patience: 3
+  early_stopping_threshold: 0.001
+  gradient_checkpointing: true
+  fp16: true
+  seed: 3407
+  mask_prompt_tokens: true
+  report_to: none
+
+inference:
+  max_new_tokens: 32
+  do_sample: false
+  batch_size: 1
+
+data:
+  root: data
+  train_template: "train/{lang}.csv"
+  dev_template: "dev/{lang}.csv"
+  test_template: "test/{lang}.csv"
+  challenge_template: "challenge/{lang}.csv"
+  image_column: image
+  caption_column: caption
+  target_column: target
+  id_column: id
+  box_columns: [x1, y1, x2, y2]
+  pad_ratio: 0.15
+  image_size: 448
+  include_dev_in_training: true
+  languages: [hi, bn, ml, or]
+
+evaluation:
+  bleu_tokenize: 13a
+  bleu_case_sensitive: true
+  chrf_beta: 3
+  chrf_char_order: 6
+  chrf_word_order: 2

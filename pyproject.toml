@@ -1,0 +1,88 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gabu-wat2026"
+version = "1.0.0"
+description = "GABU: zero-shot and QLoRA adaptation of Gemma 4 E4B for multimodal English-to-Indic translation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Shiv Ram Saud" },
+    { name = "Aashish Mahato" },
+    { name = "Prajwal Ghimire" },
+    { name = "Sundeep Dawadi" },
+    { name = "Ramesh Saud" },
+    { name = "Sunil Regmi" },
+]
+keywords = [
+    "wat2026",
+    "multimodal",
+    "machine-translation",
+    "indic",
+    "qlora",
+    "lora",
+    "gemma",
+    "hindi",
+    "bengali",
+    "malayalam",
+    "odia",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "Pillow>=10.0",
+    "PyYAML>=6.0",
+    "sacrebleu>=2.4",
+]
+
+[project.optional-dependencies]
+train = [
+    "torch>=2.4",
+    "transformers>=4.45",
+    "peft>=0.13",
+    "accelerate>=0.34",
+    "datasets>=2.20",
+    "bitsandbytes>=0.43; platform_system != 'Darwin'",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.6",
+]
+
+[project.scripts]
+gabu-train = "gabu.train:main"
+gabu-infer = "gabu.infer:main"
+gabu-evaluate = "gabu.evaluate:main"
+gabu-merge = "gabu.merge_adapter:main"
+
+[project.urls]
+Homepage = "https://github.com/praaajg/gabu-wat2026"
+Paper = "https://github.com/praaajg/gabu-wat2026/blob/main/paper/2026.wat-1.10.pdf"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]

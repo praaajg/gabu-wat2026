@@ -1,0 +1,5 @@
+language,train,dev,test,challenge
+Hindi,28930,998,1595,1400.0
+Bengali,28930,998,1595,1400.0
+Malayalam,28930,998,1595,1400.0
+Odia,28930,998,1595,

@@ -1,0 +1,5 @@
+language,baseline_bleu,finetuned_bleu,delta_bleu,baseline_chrf3,finetuned_chrf3,delta_chrf3
+Hindi,36.51,50.58,14.07,61.1,69.68,8.58
+Bengali,17.61,38.08,20.47,54.36,68.46,14.1
+Malayalam,16.89,32.44,15.55,53.59,66.62,13.03
+Macro,23.67,40.37,16.7,56.35,68.25,11.9

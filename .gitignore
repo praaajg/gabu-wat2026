@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Data, checkpoints, predictions
+data/
+outputs/
+checkpoints/
+runs/
+wandb/
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+
+# Hugging Face / Kaggle caches
+.cache/
+hf_cache/
+.kaggle/
+
+# Secrets
+.env
+.env.*
+kaggle.json
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
