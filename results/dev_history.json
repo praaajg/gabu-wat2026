@@ -1,0 +1,14 @@
+{
+  "2500": {
+    "macro_bleu": 41.67,
+    "macro_chrf": 67.03
+  },
+  "3000": {
+    "macro_bleu": 49.76,
+    "macro_chrf": 71.59
+  },
+  "3500": {
+    "macro_bleu": 41.8,
+    "macro_chrf": 67.03
+  }
+}

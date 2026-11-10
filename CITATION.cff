@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: If you use this code, please cite the paper below.
+title: "GABU@WAT 2026: Zero Shot and QLoRA Adaptation of Gemma 4 E4B for Multimodal English to Indic Translation"
+authors:
+  - family-names: Saud
+    given-names: Shiv Ram
+  - family-names: Mahato
+    given-names: Aashish
+  - family-names: Ghimire
+    given-names: Prajwal
+  - family-names: Dawadi
+    given-names: Sundeep
+  - family-names: Saud
+    given-names: Ramesh
+  - family-names: Regmi
+    given-names: Sunil
+version: 1.0.0
+date-released: 2026-11-10
+license: MIT
+repository-code: https://github.com/praaajg/gabu-wat2026
+url: https://aclanthology.org/2026.wat-1.10/
